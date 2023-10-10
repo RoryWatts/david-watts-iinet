@@ -1,0 +1,73 @@
+<html><head><title>index java trial</title>
+<style type="text/css">
+<!--
+  .roll { color:black; }
+  A.roll:hover { font-family:Arial; font-size:18pt; font-style:normal; font-weight:bold; text-decoration:none; text-transform:none; }
+-->
+</style>
+</head>
+
+<body bgcolor="white" alink="blue" link="black" text="black" vlink="red">
+<p align="center"><font size="2" face="arial">You are visitor&nbsp;<img
+src="http://www.iinet.net.au/cgi-bin/nph-count?link=/watto/index.html&amp;width=5"
+width="60" height="16"> since May 22 1997</font><p>
+
+
+<center>
+<h3>This is a trial JavaScript page / some browsers won't give the full effect<p>
+But you can visit <a href="index.html" class="roll">My normal home page</a><br>
+Try lots of links at my <a href="index1.html" class="roll">Fast page</a><br>
+Or read my <a href="access/access.html" class="roll">Columns and Web Sights</a></h2><br>
+<h3>. . . or check out the handsome fellow below<br>
+and see what he changes into . . . </h3></p>
+</center>
+<script language="JavaScript">
+<!--
+
+if (document.images) {
+  image1on = new Image();
+  image1on.src = "images/news.gif";
+
+  image2on = new Image();
+  image2on.src = "images/sport.gif";
+
+  image3on = new Image();
+  image3on.src = "images/movie.gif";
+
+  image1off = new Image();
+  image1off.src = "images/graun2.gif";
+
+  image2off = new Image();
+  image2off.src = "images/graun2.gif";
+
+  image3off = new Image();
+  image3off.src = "images/graun2.gif";
+
+}
+
+function changeImages() {
+  if (document.images) {
+    for (var i=0; i<changeImages.arguments.length; i+=2) {
+      document[changeImages.arguments[i]].src = eval(changeImages.arguments[i+1] + ".src");
+    }
+  }
+}
+
+// -->
+</script>
+<center>
+
+
+
+<table width=300 border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td align="left" width=75><a href="index1.html#newspapers" onMouseOver="changeImages('image1', 'image1on')" onMouseOut="changeImages('image1', 'image1off')"><img name="image1" src="images/graun2.gif" alt="news" width=75 height=75 border=0></a></td>
+<td align="center" width=75><a href="index1.html#sport" onMouseOver="changeImages('image2', 'image2on')" onMouseOut="changeImages('image2', 'image2off')"><img name="image2" src="images/graun2.gif" alt="sport" width=75 height=75 border=0></a></td>
+<td align="right" width=75><a href="index1.html#movies" onMouseOver="changeImages('image3', 'image3on')" onMouseOut="changeImages('image3', 'image3off')"><img name="image3" src="images/graun2.gif" alt="movies" width=75 height=75 border=0></a></td>
+</tr>
+</table>
+</center>
+
+</body>
+</html>
+

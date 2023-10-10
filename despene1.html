@@ -1,0 +1,67 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>JavaScript tutorials</title>
+</head>
+
+<body bgcolor="#000000" text="#FFFFFF" link="#FFFFFF"
+vlink="#FFFF00" alink="#FFFFFF">
+<script language="JavaScript">
+<!--
+
+alert("Happy 1999!");
+
+function openWindow(url){
+  popupWin = window.open(url, "targetWin", "menubar,toolbar,scrollbars,width=640,height=480");
+}
+
+function buildArray() {
+  var a = buildArray.arguments;
+  for (i=0; i<a.length; i++) {
+    this[i] = a[i];
+  }
+  this.length = a.length;
+}
+
+var urls1 = new buildArray("",
+"http://www.builder.com/Programming/JsSpotlight/?st.bl.pr.pr4.feat.1245",
+"http://www.hotwired.com/webmonkey/javascript/?tw=javascript",
+"http://www.gamelan.com",
+"http://www.infohiway.com/javascript/indexm.htm");
+
+function go(which, num, win) {
+  n = which.selectedIndex;
+  if (n != 0) {
+    var url = eval("urls" + num + "[n]")
+    if (win) {
+      openWindow(url);
+    } else {
+      location.href = url;
+    }
+  }
+}
+
+// -->
+</script>
+
+<h1 align="center"><font face="Arial, Helvetica, Sans">JavaScript
+Tutorial sites</font></h1>
+
+<form name="form1">
+    <p align="center"><select name="menu1" size="1"
+    onchange="go(this, 1, true)">
+        <option>Pick a site </option>
+        <option>Builder.com </option>
+        <option>HotWired Webmonkey </option>
+        <option>Gamelan </option>
+        <option>JavaScript </option>
+    </select> </p>
+</form>
+
+<h3 align="center"><a href="despene.html"><font
+face="arial, Helvetica, Sans">Return to main page</font></a></h3>
+</body>
+</html>
